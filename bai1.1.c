@@ -21,4 +21,4 @@ int main() {
     printf("Giá trị lớn nhất là: %d\n", max);
 
     return 0;
-}
+};

@@ -12,18 +12,36 @@
 
 #include <stdio.h>
 
-// //Tạo hàm 
-// int tenHam(so1, so2, so3){ 
-// int max; 
-// //Cách giải để tìm ra số lớn nhất 
-// return max; 
-// } 
+// Bước 1: Xây dựng hàm tìm giá trị lớn nhất
+float timMax(float a, float b, float c) {
+    float max = a; // Giả sử a là số lớn nhất
+
+    if (b > max) {
+        max = b; // Nếu b lớn hơn max, cập nhật max
+    }
+    
+    if (c > max) {
+        max = c; // Nếu c lớn hơn max, cập nhật max
+    }
+
+    return max; // Trả về giá trị lớn nhất tìm được
+}
 
 int main() {
+    float n1, n2, n3;
 
-    // //Gọi hàm trong hàm main 
-    // //ví dụ 
-    // int soMax = temHam(3,5,10)
-    
+    // Bước 2: Nhập dữ liệu từ bàn phím
+    printf("Nhap vao 3 so bat ky:\n");
+    printf("So thu nhat: "); scanf("%f", &n1);
+    printf("So thu hai: ");  scanf("%f", &n2);
+    printf("So thu ba: ");   scanf("%f", &n3);
+
+    // Bước 3: Gọi hàm và lưu kết quả vào biến 'ketQua'
+    float ketQua = timMax(n1, n2, n3);
+
+    // Bước 4: Xuất kết quả
+    printf("\n---------------------------\n");
+    printf("So lon nhat trong 3 so la: %.2f\n", ketQua);
+
     return 0;
 }
